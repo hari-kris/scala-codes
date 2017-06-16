@@ -1,0 +1,40 @@
+Exercises
+
+1) Although println() is a good way to print a string, can you find a way to print a string without println? Also, what kind of numbers, strings and other data does the REPL support?
+
+print() - Helps to print the result in stdout
+scala> print("Hello Word")
+Hello Word
+
+2) In the Scala REPL, convert the temperature value of 22.5 Centigrade to Fahrenheit. The conversion formula is cToF(x) = (x * 9/5) + 32.
+(22.5*9)/5+32
+
+scala> (22.5*9)/5+32
+res1: Double = 72.5
+
+3) Take the result from exercise 2, half it, and convert it back to Centigrade. You can use the generated constant variable (e.g. "res1")(change based on the value displayed in your terminal) instead of copying and pasting the value yourself.
+
+scala> (((res1/2)-32)*5)/9
+res5: Double = 2.361111111111111
+
+4) The REPL can load and interpret Scala code from an external file with the ":load <file>" command. Create a new file named "Hello.scala" and add a command that will print a greeting, then execute it from the REPL.
+
+scala> :load Hello.scala
+Loading Hello.scala...
+Hello World
+
+5) Another way to load external Scala code is to paste it into the repl in "raw" mode, where the code is compiled as if it were actually in a proper source file. To do this, type ":paste", hit return, and then paste the contents of your source file from exercise 4. After exiting "paste" mode you should see the greeting.
+
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+println("Hello World")
+
+// Exiting paste mode, now interpreting.
+
+Hello World
+
+Extra Question
+1) How to clear the content in the REPL instead of using enter key to clear.
+
+ctrl + l (Equilatent to clear in linux terminal)
